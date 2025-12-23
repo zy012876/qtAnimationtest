@@ -8,18 +8,6 @@ find_package(Qt6 REQUIRED COMPONENTS Quick)
 
 qt_standard_project_setup(REQUIRES 6.8)
 
-if(${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
-    if(${CMAKE_SYSTEM_PROCESSOR} MATCHES "aarch64")
-        link_directories("d:/work/code/sdk/lib/linux/aarch64/")
-    else()
-        link_directories("d:/work/code/sdk/lib/linux/")
-    endif()
-    set(QML_IMPORT_PATH "/opt/QtPlugins/;${CMAKE_CURRENT_SOURCE_DIR}/res/modules" CACHE STRING "" FORCE)
-else()
-    link_directories("d:/work/code/sdk/lib/windows/")
-    set(QML_IMPORT_PATH "e:/Qt/Plugins/;${CMAKE_CURRENT_SOURCE_DIR}/res/modules" CACHE STRING "" FORCE)
-endif()
-
 qt_add_executable(appanimation
     main.cpp
 )
