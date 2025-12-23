@@ -1,1 +1,2 @@
 qml动画组件实例
+各组件介绍在doc/Qt6_QML_Animation_Full_Practical_Guide.md中
